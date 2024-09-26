@@ -1,0 +1,89 @@
+1->
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+    string x = s;
+    reverse(s.begin(), s.end());
+    cout<<s + x;
+        
+        
+}
+
+2->
+#include <iostream>
+#include <algorithm>
+#include<climits>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+    
+    char maxi = CHAR_MIN; 
+    for(int i = 0; i < s.size(); i++) {
+        if(s[i] > maxi)  
+            maxi = s[i];
+    }
+
+    cout << maxi;  
+}
+
+
+3->
+#include <iostream>
+#include <algorithm>
+#include<climits>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s);
+    
+    int count = 0;
+    for(int i = 0; i < s.size(); i++) {
+        if(s[i] == 'o' || s[i] == 'i' || s[i] == 'e' || s[i] == 'a' || s[i] == 'u')
+        count++;
+    }
+
+    cout << count;
+}
+
+4->
+	
+
+5->
+
+#include <iostream>
+#include <algorithm>
+#include <sstream>
+#include<climits>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+    vector<string> v;
+    string str;
+    getline(cin, str);
+    string temp;
+    stringstream ss(str);
+    while(ss>>temp){
+        v.push_back(temp);
+    }
+    string maxi = "";
+    for(int i = 0; i < v.size(); i++){
+        if(v[i] > maxi) maxi = v[i];
+    }
+    cout<<maxi;
+        
+}
